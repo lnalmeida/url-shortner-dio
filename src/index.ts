@@ -4,8 +4,9 @@ import cors from 'cors';
 import router from './routes/routes';
 
 const app = express();
-app.use(morgan('dev'));
+const db = process.env.MONGODB_URI;
 
+app.use(morgan('dev'));
 app.use(cors());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
