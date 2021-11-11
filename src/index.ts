@@ -2,9 +2,12 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import router from './routes/routes';
+import  MongoConnection  from './database/MongoConnection'
 
 const app = express();
-const db = process.env.MONGODB_URI;
+const database = new MongoConnection();
+
+database.connect();
 
 app.use(morgan('dev'));
 app.use(cors());

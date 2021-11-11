@@ -4,6 +4,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "rootDir": "src",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators":true,
     "typeRoots": [
       "./src@types",
       "./node_modules/@types"
